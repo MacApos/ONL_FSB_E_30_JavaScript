@@ -1,0 +1,43 @@
+self["webpackHotUpdatees6_async_await"](0,{
+
+/***/ 24:
+/***/ (() => {
+
+function findBook(isbn) {
+  fetch("https://www.googleapis.com/books/v1/volumes?q=isbn:".concat(isbn)).then(function (response) {
+    if (!response.ok) {
+      throw new Error();
+    }
+    return response.json();
+  }).then(function (book) {
+    return createElement(book);
+  })["catch"](function (error) {
+    return console.warn(error);
+  });
+}
+function createElement(book) {
+  var title = book.items[0].volumeInfo.title;
+  var h2 = document.createElement("h2");
+  h2.innerText = title;
+  var selector = document.querySelector(".book-info");
+  selector.appendChild(h2);
+}
+var form = document.querySelector("form");
+var input = form.querySelector("input");
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  findBook(input.value);
+});
+
+/***/ })
+
+},
+/******/ function(__webpack_require__) { // webpackRuntimeModules
+/******/ /* webpack/runtime/getFullHash */
+/******/ (() => {
+/******/ 	__webpack_require__.h = () => ("f133d35ea698fba7f260")
+/******/ })();
+/******/ 
+/******/ }
+);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMC45NDRmMmMwZDllNDc1YWJiYWRlYS5ob3QtdXBkYXRlLmpzIiwibWFwcGluZ3MiOiI7Ozs7O0FBQUEsU0FBU0EsUUFBUUEsQ0FBQ0MsSUFBSSxFQUFFO0VBQ3BCQyxLQUFLLHVEQUFBQyxNQUFBLENBQXVERixJQUFJLENBQUUsQ0FBQyxDQUM5REcsSUFBSSxDQUFDLFVBQUFDLFFBQVEsRUFBSTtJQUNkLElBQUksQ0FBQ0EsUUFBUSxDQUFDQyxFQUFFLEVBQUU7TUFDZCxNQUFNLElBQUlDLEtBQUssQ0FBQyxDQUFDO0lBQ3JCO0lBQ0EsT0FBT0YsUUFBUSxDQUFDRyxJQUFJLENBQUMsQ0FBQztFQUMxQixDQUFDLENBQUMsQ0FDREosSUFBSSxDQUFDLFVBQUFLLElBQUk7SUFBQSxPQUFJQyxhQUFhLENBQUNELElBQUksQ0FBQztFQUFBLEVBQUMsU0FDNUIsQ0FBQyxVQUFBRSxLQUFLO0lBQUEsT0FBSUMsT0FBTyxDQUFDQyxJQUFJLENBQUNGLEtBQUssQ0FBQztFQUFBLEVBQUM7QUFDNUM7QUFFQSxTQUFTRCxhQUFhQSxDQUFDRCxJQUFJLEVBQUU7RUFDekIsSUFBTUssS0FBSyxHQUFHTCxJQUFJLENBQUNNLEtBQUssQ0FBQyxDQUFDLENBQUMsQ0FBQ0MsVUFBVSxDQUFDRixLQUFLO0VBQzVDLElBQU1HLEVBQUUsR0FBR0MsUUFBUSxDQUFDUixhQUFhLENBQUMsSUFBSSxDQUFDO0VBQ3ZDTyxFQUFFLENBQUNFLFNBQVMsR0FBR0wsS0FBSztFQUNwQixJQUFNTSxRQUFRLEdBQUdGLFFBQVEsQ0FBQ0csYUFBYSxDQUFDLFlBQVksQ0FBQztFQUNyREQsUUFBUSxDQUFDRSxXQUFXLENBQUNMLEVBQUUsQ0FBQztBQUM1QjtBQUVBLElBQU1NLElBQUksR0FBR0wsUUFBUSxDQUFDRyxhQUFhLENBQUMsTUFBTSxDQUFDO0FBQzNDLElBQU1HLEtBQUssR0FBR0QsSUFBSSxDQUFDRixhQUFhLENBQUMsT0FBTyxDQUFDO0FBQ3pDRSxJQUFJLENBQUNFLGdCQUFnQixDQUFDLFFBQVEsRUFBRSxVQUFVQyxLQUFLLEVBQUU7RUFDN0NBLEtBQUssQ0FBQ0MsY0FBYyxDQUFDLENBQUM7RUFDdEIzQixRQUFRLENBQUN3QixLQUFLLENBQUNJLEtBQUssQ0FBQztBQUN6QixDQUFDLENBQUM7Ozs7Ozs7O1VDekJGIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vZXM2LWFzeW5jLWF3YWl0Ly4vMDNfRHppZW5fNC8wMl9GZXRjaC8wMV9aYWRhbmllXzEvanMvYXBwLmpzIiwid2VicGFjazovL2VzNi1hc3luYy1hd2FpdC93ZWJwYWNrL3J1bnRpbWUvZ2V0RnVsbEhhc2giXSwic291cmNlc0NvbnRlbnQiOlsiZnVuY3Rpb24gZmluZEJvb2soaXNibikge1xuICAgIGZldGNoKGBodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9ib29rcy92MS92b2x1bWVzP3E9aXNibjoke2lzYm59YClcbiAgICAgICAgLnRoZW4ocmVzcG9uc2UgPT4ge1xuICAgICAgICAgICAgaWYgKCFyZXNwb25zZS5vaykge1xuICAgICAgICAgICAgICAgIHRocm93IG5ldyBFcnJvcigpO1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgcmV0dXJuIHJlc3BvbnNlLmpzb24oKVxuICAgICAgICB9KVxuICAgICAgICAudGhlbihib29rID0+IGNyZWF0ZUVsZW1lbnQoYm9vaykpXG4gICAgICAgIC5jYXRjaChlcnJvciA9PiBjb25zb2xlLndhcm4oZXJyb3IpKTtcbn1cblxuZnVuY3Rpb24gY3JlYXRlRWxlbWVudChib29rKSB7XG4gICAgY29uc3QgdGl0bGUgPSBib29rLml0ZW1zWzBdLnZvbHVtZUluZm8udGl0bGU7XG4gICAgY29uc3QgaDIgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KFwiaDJcIik7XG4gICAgaDIuaW5uZXJUZXh0ID0gdGl0bGU7XG4gICAgY29uc3Qgc2VsZWN0b3IgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLmJvb2staW5mb1wiKTtcbiAgICBzZWxlY3Rvci5hcHBlbmRDaGlsZChoMik7XG59XG5cbmNvbnN0IGZvcm0gPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiZm9ybVwiKTtcbmNvbnN0IGlucHV0ID0gZm9ybS5xdWVyeVNlbGVjdG9yKFwiaW5wdXRcIik7XG5mb3JtLmFkZEV2ZW50TGlzdGVuZXIoXCJzdWJtaXRcIiwgZnVuY3Rpb24gKGV2ZW50KSB7XG4gICAgZXZlbnQucHJldmVudERlZmF1bHQoKTtcbiAgICBmaW5kQm9vayhpbnB1dC52YWx1ZSk7XG59KVxuIiwiX193ZWJwYWNrX3JlcXVpcmVfXy5oID0gKCkgPT4gKFwiZjEzM2QzNWVhNjk4ZmJhN2YyNjBcIikiXSwibmFtZXMiOlsiZmluZEJvb2siLCJpc2JuIiwiZmV0Y2giLCJjb25jYXQiLCJ0aGVuIiwicmVzcG9uc2UiLCJvayIsIkVycm9yIiwianNvbiIsImJvb2siLCJjcmVhdGVFbGVtZW50IiwiZXJyb3IiLCJjb25zb2xlIiwid2FybiIsInRpdGxlIiwiaXRlbXMiLCJ2b2x1bWVJbmZvIiwiaDIiLCJkb2N1bWVudCIsImlubmVyVGV4dCIsInNlbGVjdG9yIiwicXVlcnlTZWxlY3RvciIsImFwcGVuZENoaWxkIiwiZm9ybSIsImlucHV0IiwiYWRkRXZlbnRMaXN0ZW5lciIsImV2ZW50IiwicHJldmVudERlZmF1bHQiLCJ2YWx1ZSJdLCJzb3VyY2VSb290IjoiIn0=

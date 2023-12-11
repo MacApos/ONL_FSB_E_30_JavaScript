@@ -1,0 +1,39 @@
+self["webpackHotUpdatees6_async_await"](0,{
+
+/***/ 24:
+/***/ (() => {
+
+fetch("https://fer-api.coderslab.pl/v1/holidays?key=e92601251-c0a2-4s63-v73f-54041195480f&country=PL").then(function (response) {
+  if (!response.ok) {
+    throw new Error();
+  }
+  return response.json();
+}).then(function (country) {
+  return console.log(country.holidays[106]);
+})["catch"](function (error) {
+  return console.warn(error);
+});
+var main = document.querySelector("main");
+var ul = main.querySelector("ul");
+var select = document.createElement("select");
+["PL", "GB", "US"].forEach(function (country) {
+  var option = document.createElement("option");
+  option.selected = country === "PL";
+  option.value = country;
+  option.innerText = country;
+  select.appendChild(option);
+});
+main.insertBefore(select, ul);
+
+/***/ })
+
+},
+/******/ function(__webpack_require__) { // webpackRuntimeModules
+/******/ /* webpack/runtime/getFullHash */
+/******/ (() => {
+/******/ 	__webpack_require__.h = () => ("9939cfa409308f60dc1f")
+/******/ })();
+/******/ 
+/******/ }
+);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMC41OThiZGM4ZjVhZDMxMWYyZDUyZS5ob3QtdXBkYXRlLmpzIiwibWFwcGluZ3MiOiI7Ozs7O0FBQUFBLEtBQUssZ0dBQWdHLENBQUMsQ0FDakdDLElBQUksQ0FBQyxVQUFBQyxRQUFRLEVBQUk7RUFDZCxJQUFJLENBQUNBLFFBQVEsQ0FBQ0MsRUFBRSxFQUFFO0lBQ2QsTUFBTSxJQUFJQyxLQUFLLENBQUMsQ0FBQztFQUNyQjtFQUNBLE9BQU9GLFFBQVEsQ0FBQ0csSUFBSSxDQUFDLENBQUM7QUFDMUIsQ0FBQyxDQUFDLENBQ0RKLElBQUksQ0FBQyxVQUFBSyxPQUFPO0VBQUEsT0FBSUMsT0FBTyxDQUFDQyxHQUFHLENBQUNGLE9BQU8sQ0FBQ0csUUFBUSxDQUFDLEdBQUcsQ0FBQyxDQUFDO0FBQUEsRUFBQyxTQUM5QyxDQUFDLFVBQUFDLEtBQUs7RUFBQSxPQUFJSCxPQUFPLENBQUNJLElBQUksQ0FBQ0QsS0FBSyxDQUFDO0FBQUEsRUFBQztBQUV4QyxJQUFNRSxJQUFJLEdBQUdDLFFBQVEsQ0FBQ0MsYUFBYSxDQUFDLE1BQU0sQ0FBQztBQUMzQyxJQUFNQyxFQUFFLEdBQUdILElBQUksQ0FBQ0UsYUFBYSxDQUFDLElBQUksQ0FBQztBQUNuQyxJQUFNRSxNQUFNLEdBQUdILFFBQVEsQ0FBQ0ksYUFBYSxDQUFDLFFBQVEsQ0FBQztBQUMvQyxDQUFDLElBQUksRUFBRSxJQUFJLEVBQUUsSUFBSSxDQUFDLENBQUNDLE9BQU8sQ0FBQyxVQUFBWixPQUFPLEVBQUk7RUFDbEMsSUFBTWEsTUFBTSxHQUFHTixRQUFRLENBQUNJLGFBQWEsQ0FBQyxRQUFRLENBQUM7RUFDL0NFLE1BQU0sQ0FBQ0MsUUFBUSxHQUFHZCxPQUFPLEtBQUssSUFBSTtFQUNsQ2EsTUFBTSxDQUFDRSxLQUFLLEdBQUdmLE9BQU87RUFDdEJhLE1BQU0sQ0FBQ0csU0FBUyxHQUFHaEIsT0FBTztFQUMxQlUsTUFBTSxDQUFDTyxXQUFXLENBQUNKLE1BQU0sQ0FBQztBQUM5QixDQUFDLENBQUM7QUFDRlAsSUFBSSxDQUFDWSxZQUFZLENBQUNSLE1BQU0sRUFBRUQsRUFBRSxDQUFDOzs7Ozs7OztVQ3BCN0IiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9lczYtYXN5bmMtYXdhaXQvLi8wM19Eemllbl80LzAyX0ZldGNoLzAzX1phZGFuaWVfMy9qcy9hcHAuanMiLCJ3ZWJwYWNrOi8vZXM2LWFzeW5jLWF3YWl0L3dlYnBhY2svcnVudGltZS9nZXRGdWxsSGFzaCJdLCJzb3VyY2VzQ29udGVudCI6WyJmZXRjaChgaHR0cHM6Ly9mZXItYXBpLmNvZGVyc2xhYi5wbC92MS9ob2xpZGF5cz9rZXk9ZTkyNjAxMjUxLWMwYTItNHM2My12NzNmLTU0MDQxMTk1NDgwZiZjb3VudHJ5PVBMYClcbiAgICAudGhlbihyZXNwb25zZSA9PiB7XG4gICAgICAgIGlmICghcmVzcG9uc2Uub2spIHtcbiAgICAgICAgICAgIHRocm93IG5ldyBFcnJvcigpO1xuICAgICAgICB9XG4gICAgICAgIHJldHVybiByZXNwb25zZS5qc29uKCk7XG4gICAgfSlcbiAgICAudGhlbihjb3VudHJ5ID0+IGNvbnNvbGUubG9nKGNvdW50cnkuaG9saWRheXNbMTA2XSkpXG4gICAgLmNhdGNoKGVycm9yID0+IGNvbnNvbGUud2FybihlcnJvcikpO1xuXG5jb25zdCBtYWluID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIm1haW5cIik7XG5jb25zdCB1bCA9IG1haW4ucXVlcnlTZWxlY3RvcihcInVsXCIpO1xuY29uc3Qgc2VsZWN0ID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudChcInNlbGVjdFwiKTtcbltcIlBMXCIsIFwiR0JcIiwgXCJVU1wiXS5mb3JFYWNoKGNvdW50cnkgPT4ge1xuICAgIGNvbnN0IG9wdGlvbiA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoXCJvcHRpb25cIik7XG4gICAgb3B0aW9uLnNlbGVjdGVkID0gY291bnRyeSA9PT0gXCJQTFwiXG4gICAgb3B0aW9uLnZhbHVlID0gY291bnRyeTtcbiAgICBvcHRpb24uaW5uZXJUZXh0ID0gY291bnRyeTtcbiAgICBzZWxlY3QuYXBwZW5kQ2hpbGQob3B0aW9uKTtcbn0pXG5tYWluLmluc2VydEJlZm9yZShzZWxlY3QsIHVsKTtcblxuIiwiX193ZWJwYWNrX3JlcXVpcmVfXy5oID0gKCkgPT4gKFwiOTkzOWNmYTQwOTMwOGY2MGRjMWZcIikiXSwibmFtZXMiOlsiZmV0Y2giLCJ0aGVuIiwicmVzcG9uc2UiLCJvayIsIkVycm9yIiwianNvbiIsImNvdW50cnkiLCJjb25zb2xlIiwibG9nIiwiaG9saWRheXMiLCJlcnJvciIsIndhcm4iLCJtYWluIiwiZG9jdW1lbnQiLCJxdWVyeVNlbGVjdG9yIiwidWwiLCJzZWxlY3QiLCJjcmVhdGVFbGVtZW50IiwiZm9yRWFjaCIsIm9wdGlvbiIsInNlbGVjdGVkIiwidmFsdWUiLCJpbm5lclRleHQiLCJhcHBlbmRDaGlsZCIsImluc2VydEJlZm9yZSJdLCJzb3VyY2VSb290IjoiIn0=
