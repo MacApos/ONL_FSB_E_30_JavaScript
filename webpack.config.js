@@ -1,11 +1,11 @@
 const path = require("path");
 const webpack = require("webpack");
 
-const entryPath = "01_Dzien_1/01_Zadania/02_Zadanie_2";
+const entryPath = "03_Dzien_4/02_Fetch/03_Zadanie_3";
 
 module.exports = {
   mode: "none",
-  entry: `./${entryPath}/js/app.js`,
+  entry: ["whatwg-fetch", `./${entryPath}/js/app.js`],
   devtool: "inline-source-map",
   output: {
     filename: "out.js",
