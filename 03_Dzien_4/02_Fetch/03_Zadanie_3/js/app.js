@@ -1,15 +1,29 @@
-fetch(`https://fer-api.coderslab.pl/v1/holidays?key=e92601251-c0a2-4s63-v73f-54041195480f&country=PL`)
-    .then(response => {
-        if (!response.ok) {
-            throw new Error();
-        }
-        return response.json();
-    })
-    .then(country => console.log(country.holidays[106]))
-    .catch(error => console.warn(error));
+function holidaysByCountry(country) {
+    fetch(`https://fer-api.coderslab.pl/v1/holidays?key=e92601251-c0a2-4s63-v73f-54041195480f&country=${country}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error();
+            }
+            return response.json();
+        })
+        .then(country => country.holidays.forEach(holiday => createListItem(holiday)))
+        .catch(error => console.warn(error));
+}
+
+function createListItem(holiday) {
+    const li = document.createElement("li");
+    const h3 = document.createElement("h3");
+    const div = document.createElement("div");
+    h3.innerText = holiday.name;
+    h3.classList.add("holiday-name");
+    div.innerText = holiday.date;
+    div.classList.add("holiday-date");
+    li.appendChild(h3);
+    li.appendChild(div);
+    document.querySelector("ul.list").appendChild(li);
+}
 
 const main = document.querySelector("main");
-const ul = main.querySelector("ul");
 const select = document.createElement("select");
 ["PL", "GB", "US"].forEach(country => {
     const option = document.createElement("option");
@@ -18,9 +32,10 @@ const select = document.createElement("select");
     option.innerText = country;
     select.appendChild(option);
 })
-main.insertBefore(select, ul);
+main.insertBefore(select, document.querySelector("ul.list"));
 
-select.addEventListener("change", function(event){
-    console.log(this.value);
+select.addEventListener("change", function (event) {
+    const ul = document.querySelector("ul.list");
+    ul.parentElement.replaceChild(ul.cloneNode(false), ul);
+    holidaysByCountry(this.value);
 })
-

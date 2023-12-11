@@ -1,7 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
 
-const entryPath = "03_Dzien_4/02_Fetch/03_Zadanie_3";
+const entryPath = "03_Dzien_4/03_Async_Await/03_Zadanie_3";
 
 module.exports = {
   mode: "none",
